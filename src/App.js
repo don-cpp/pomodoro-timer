@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './App.css';
 
 export default function App() {
     const [secondsLeft, setSecondsLeft] = useState(25 * 60);
@@ -25,9 +26,9 @@ export default function App() {
     }, [timer]);
 
     return (
-        <div className="App">
-            <h1>Pomodoro timer</h1>
-            <button onClick={start}>start</button>
+        <div className = "App">
+            <h1 className="title">Pomodoro timer</h1>
+            <button onClick={start} className="start-button">start</button>
             <div>{secondsLeft} seconds left</div>
         </div>
     );
